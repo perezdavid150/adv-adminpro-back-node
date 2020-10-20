@@ -8,7 +8,6 @@ const fileUpload = ( req, res = response ) => {
 
     // Validar tipo
     const tiposValidos = ['hospitales', 'medicos', 'usuarios'];
-    console.log(tipo);
 
     if(!tiposValidos.includes(tipo)){
         return res.status(400).json({
