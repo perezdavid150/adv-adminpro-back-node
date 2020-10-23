@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4ecb01ee-186b-4b30-8f10-c7c436b11d4a",
+		"_postman_id": "ef48961d-f3d1-4dfa-97cb-bafd8e20a3d2",
 		"name": "AdminPro-Backend",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -35,13 +35,183 @@
 			"response": []
 		},
 		{
+			"name": "Busqueda total",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjhmMzExMjlkNTMxMjRjYjIxZDE5YTQiLCJpYXQiOjE2MDMyMjIyODQsImV4cCI6MTYwMzI2NTQ4NH0.w9jXnn_8yAaOcSHE0cYBJhh-ZJMJzveEfyiZszKiaw4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"David\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"1234@123.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/todo/a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todo",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subir imagen",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjhmMzExMjlkNTMxMjRjYjIxZDE5YTQiLCJpYXQiOjE2MDM0NzAwMzcsImV4cCI6MTYwMzUxMzIzN30.azeNwySLapY_f7sTf0eGelF9FckqatNJZUdmO1vECeM"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/home/david/Escritorio/llamas.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/upload/usuarios/5f8f31129d53124cb21d19a4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"upload",
+						"usuarios",
+						"5f8f31129d53124cb21d19a4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get imagen",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjhmMzExMjlkNTMxMjRjYjIxZDE5YTQiLCJpYXQiOjE2MDM0NzAwMzcsImV4cCI6MTYwMzUxMzIzN30.azeNwySLapY_f7sTf0eGelF9FckqatNJZUdmO1vECeM"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/home/david/Escritorio/llamas.jpg",
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/upload/usuarios/2a721a90-57ce-40a5-af1e-8e5378b7e9e.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"upload",
+						"usuarios",
+						"2a721a90-57ce-40a5-af1e-8e5378b7e9e.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda por coleccion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjhmMzExMjlkNTMxMjRjYjIxZDE5YTQiLCJpYXQiOjE2MDMyMjIyODQsImV4cCI6MTYwMzI2NTQ4NH0.w9jXnn_8yAaOcSHE0cYBJhh-ZJMJzveEfyiZszKiaw4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"David\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"1234@123.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/todo/coleccion/hospitales/e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todo",
+						"coleccion",
+						"hospitales",
+						"e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get Usuarios",
 			"request": {
 				"method": "GET",
 				"header": [
 					{
 						"key": "x-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjViYTEzMGI5M2M5NTA3MDAxNTA5OGMiLCJpYXQiOjE1OTk4NDI0NjksImV4cCI6MTU5OTg4NTY2OX0.5ZPQH0ENgxO61ujq3u5NhfX2iVgVlynpAuVHCsq5F-k",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjhmMzExMjlkNTMxMjRjYjIxZDE5YTQiLCJpYXQiOjE2MDM0NzAwMzcsImV4cCI6MTYwMzUxMzIzN30.azeNwySLapY_f7sTf0eGelF9FckqatNJZUdmO1vECeM",
 						"type": "text"
 					}
 				],
@@ -67,7 +237,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\": \"David\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"1234@123.com\"\r\n}",
+					"raw": "{\r\n    \"nombre\": \"Test15\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"test15@123.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -171,13 +341,13 @@
 				"header": [
 					{
 						"key": "x-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjViYTEzMGI5M2M5NTA3MDAxNTA5OGMiLCJpYXQiOjE2MDAzNzM2NTMsImV4cCI6MTYwMDQxNjg1M30.YSAjPZ0_SL6f3CS-Ao9FPONdEYg7SSRiDMDPSn-srqk",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjhmMzExMjlkNTMxMjRjYjIxZDE5YTQiLCJpYXQiOjE2MDMyMTk3NTcsImV4cCI6MTYwMzI2Mjk1N30.6E-JapIcfo-BuIt55FYaLADDb-RynBiPy6QjE31-J3U",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\": \"Hospital materno infantil\"\r\n}",
+					"raw": "{\r\n    \"nombre\": \"Hospital del sur\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -227,12 +397,12 @@
 					{
 						"key": "x-token",
 						"type": "text",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjViYTEzMGI5M2M5NTA3MDAxNTA5OGMiLCJpYXQiOjE2MDAzNzM2NTMsImV4cCI6MTYwMDQxNjg1M30.YSAjPZ0_SL6f3CS-Ao9FPONdEYg7SSRiDMDPSn-srqk"
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZjhmMzExMjlkNTMxMjRjYjIxZDE5YTQiLCJpYXQiOjE2MDMyMTk3NTcsImV4cCI6MTYwMzI2Mjk1N30.6E-JapIcfo-BuIt55FYaLADDb-RynBiPy6QjE31-J3U"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\": \"Carlos Pineda\",\r\n    \"hospital\": \"5f63c5a8726c7546909609f2\"\r\n}",
+					"raw": "{\r\n    \"nombre\": \"Carlos Pineda\",\r\n    \"hospital\": \"5f8f33829d53124cb21d19a5\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
